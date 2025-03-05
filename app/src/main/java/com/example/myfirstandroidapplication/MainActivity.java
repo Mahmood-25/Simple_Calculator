@@ -43,16 +43,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        try {
-            double firstNum = Double.parseDouble(firstNumText);
-            double secondNum = Double.parseDouble((secondNumText));
 
-            double result = (double) firstNum + secondNum;
-            DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
-            output.setText(df.format(result));
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid input: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+        double firstNum = Double.parseDouble(firstNumText);
+        double secondNum = Double.parseDouble((secondNumText));
+
+        double result = (double) firstNum + secondNum;
+        DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
+        output.setText(df.format(result));
+
     }
 
     public void minus(View view){
@@ -64,16 +62,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        try {
-            double firstNum = Double.parseDouble(firstNumText);
-            double secondNum = Double.parseDouble((secondNumText));
 
-            double result = (double) firstNum - secondNum;
-            DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
-            output.setText(df.format(result));
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid input: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+        double firstNum = Double.parseDouble(firstNumText);
+        double secondNum = Double.parseDouble((secondNumText));
+
+        double result = (double) firstNum - secondNum;
+        DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
+        output.setText(df.format(result));
+
     }
 
     public void multiply(View view){
@@ -85,16 +81,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        try {
-            double firstNum = Double.parseDouble(firstNumText);
-            double secondNum = Double.parseDouble((secondNumText));
 
-            double result = (double) firstNum * secondNum;
-            DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
-            output.setText(df.format(result));
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid input: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+        double firstNum = Double.parseDouble(firstNumText);
+        double secondNum = Double.parseDouble((secondNumText));
+
+        double result = (double) firstNum * secondNum;
+        DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
+        output.setText(df.format(result));
+
     }
 
     public void divide(View view){
@@ -106,23 +100,20 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        try {
-            double firstNum = Double.parseDouble(firstNumText);
-            double secondNum = Double.parseDouble((secondNumText));
+
+        double firstNum = Double.parseDouble(firstNumText);
+        double secondNum = Double.parseDouble((secondNumText));
 
 
-            if (secondNum == 0) {
-                Toast.makeText(this, "Cannot divide by zero!", Toast.LENGTH_SHORT).show();
-                return; // Exit the method early
-            }
-
-            double result = (double) firstNum / secondNum;
-            DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
-            output.setText(df.format(result));
-
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid input: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        if (secondNum == 0) {
+            Toast.makeText(this, "Cannot divide by zero!", Toast.LENGTH_SHORT).show();
+            return; // Exit the method early
         }
+
+        double result = (double) firstNum / secondNum;
+        DecimalFormat df = new DecimalFormat("#.##"); // 2 decimal places
+        output.setText(df.format(result));
+
     }
 
     public void reset(View view) {
